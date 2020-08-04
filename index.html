@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CALCULATOR</title>
+  </head>
+  <body style="background:  radial-gradient(circle, rgba(57,69,142,1) 0%, rgba(111,205,142,1) 100%);"><br><br><h1 align="center" style="color:white;">CALCULATOR</h1>
+    <style>
+      .buttonclicked:hover{
+        color:white;
+        cursor: pointer;
+        transition:all 0.3s;
+        text-decoration: none;
+        background-color: transparent;
+      }
+      </style>
+    <table align="center">
+      <tr ">
+        <td colspan="4">
+          <input type="text" id="input" size="20px" disabled/></td>
+      <tr>
+
+            <td  colspan="3"><button class="buttonclicked" id="ac" value="0" onclick="ac()" style="width:100%;">AC</button></td>
+          <td><button class="buttonclicked" id="plus" value="+" style="width:100%;"onclick="pluss()">+</button></td>
+        
+        </tr>
+  
+        <tr></tr>
+        <tr>
+          <td><button class="buttonclicked" id="bt1" value="1" style="width:100%;" onclick="print1()">1</button></td>
+          <td><button class="buttonclicked" id="bt2" value="2" style="width:100%;"onclick="print2()">2</button></td>
+          <td><button class="buttonclicked" id="bt3" value="3" style="width:100%;"onclick="print3()">3</td>
+            <td><button class="buttonclicked"  id="subtract" style="width:100%;" value="-" onclick="sub()">-</button></td>
+        </tr>
+  
+        
+        <tr>
+          <td><button class="buttonclicked" id="bt4" value="4" style="width:100%;"onclick="print4()">4</button></td>
+          <td><button class="buttonclicked" id="bt5" value="5" style="width:100%;"onclick="print5()">5</button></td>
+          <td><button class="buttonclicked" id="bt6" value="6" style="width:100%;"onclick="print6()">6</button></td>
+          <td><button class="buttonclicked" id="multiply" value="*" style="width:100%;" onclick="mult()">*</button></td>
+        </tr>
+  
+        <tr >
+            <td><button class="buttonclicked" id="bt7" value="7" style="width:100%;" onclick="print7()">7</button></td>
+            <td><button class="buttonclicked" id="bt8"value="8"  style="width:100%;" onclick="print8()">8</button></td>
+            <td><button class="buttonclicked" id="bt9" value="9" style="width:100%;"onclick="print9()">9</button></td>
+            <td><button class="buttonclicked" id="division" value="/" style="width:100%;" onclick="div()">/</button></td>
+          </tr>
+  
+          <tr>
+              <td colspan="2" ><button class="buttonclicked" style="width:100%;" id="zero" value="0" onclick="print0()">0</button></td>
+              <td><button class="buttonclicked" id="dot" value="." style="width:100%;" onclick="dott()">&nbsp;.</button></td>
+              <td><button class="buttonclicked"  id="equals" value="=" style="width:100%;" onclick="equalize()">=</button></td>
+              
+            </tr>
+            
+      </table>
+   
+      <script>
+        var button1=bt1.value;
+        var button2=bt2.value;
+        var button3=bt3.value;
+        var button4=bt4.value;
+        var button5=bt5.value;
+        var button6=bt6.value;
+        var button7=bt7.value;
+        var button8=bt8.value;
+        var button9=bt9.value;
+        var button0=zero.value;
+              function print1(){
+              
+                input.value+=button1;
+              }
+              function print2(){
+                
+                input.value+=button2;
+              }
+              function print3(){
+               
+                input.value+=button3;
+              }
+              function print4(){
+                
+                input.value+=button4;
+              }
+              function print5(){
+               
+                input.value+=button5;
+              }
+              function print6(){
+                
+                input.value+=button6;
+              }
+              function print7(){
+                
+                input.value+=button7;
+              }
+              function print8(){
+                
+                input.value+=button8;
+              }
+              function print9(){
+                
+                input.value+=button9;
+              }
+              function print0(){
+               
+                input.value+=button0;
+              }
+              function ac(){
+                document.getElementById('input').value = '';
+              }
+              function dott(){
+                var d=dot.value;
+                input.value+=d;
+              }
+              function pluss(){
+                var add=plus.value;
+                input.value+=add;
+                
+              
+              }
+              function sub(){
+                var subt=subtract.value;
+                input.value+=subt;
+              }
+               function mult(){
+                var multiplies=multiply.value;
+                input.value+=multiplies;
+              } 
+              function div(){
+                var divides=division.value;
+                input.value+=divides;
+              }
+              function equalize(){
+               var x = document.getElementById("input").value
+               var y = eval(x);
+               document.getElementById("input").value = y
+              }
+    </script>
+
+  </body>
+</html>
